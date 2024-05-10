@@ -10,7 +10,7 @@ Project carried out during my year of training as a D.A.
 (item_properties.сsv) et un fichier décrivant l'arborescence des catégories (category_tree.сsv). Les données ont été collectées à partir d'un site web de commerce électronique réel. Il s'agit de données brutes, c'est-à-dire sans aucune transformation du contenu, mais toutes les valeurs ont été anonymisées pour des raisons de confidentialité. 
 Les données étaient disponibles librement sur Kaggle
 
-# volumétrie :
+# Volumétrie :
 #1 fichier event csv  275609 lignes / 5 cols
 #2 fichiers property   2 520 259 lignes / 4 cols + 2 115 992 lignes / 4 cols
 #1 fichier category 1669 lignes / 2 cols

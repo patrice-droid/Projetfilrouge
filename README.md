@@ -29,6 +29,6 @@ Les données étaient disponibles librement sur Kaggle
 
 #Détection et Correction des Anomalies : Identifier les erreurs ou les anomalies dans les données pour garantir la sécurité et l'efficacité des opérations. 
 
-#Préparation des Données pour des Analyses Avancées : Nettoyer et transformer les données pour faciliter des analyses plus #complexes, comme le machine learning ou l'analyse prédictive. 
+#Préparation des Données pour des Analyses Avancées : Nettoyer et transformer les données pour faciliter des analyses plus complexes, comme le machine learning ou l'analyse prédictive. 
 
 #Ces objectifs visent à tirer le meilleur parti des données disponibles pour favoriser la croissance et l'efficience de #l'entreprise dans un environnement commercial en constante évolution.

@@ -7,8 +7,8 @@ Project carried out during my year of training as a D.A.
 
 #Quatre datasets  : 
 #un fichier contenant des données comportementales (events.csv), deux fichiers contenant les propriétés des #articles 
-#(item_properties.сsv) et un fichier décrivant l'arborescence des catégories (category_tree.сsv). Les données ont été #collectées #à partir d'un site web de commerce électronique réel. Il s'agit de données brutes, c'est-à-dire sans aucune #transformation du #contenu, mais toutes les valeurs ont été anonymisées pour des raisons de confidentialité. 
-#Les données étaient disponibles librement sur Kaggle
+(item_properties.сsv) et un fichier décrivant l'arborescence des catégories (category_tree.сsv). Les données ont été #collectées à partir d'un site web de commerce électronique réel. Il s'agit de données brutes, c'est-à-dire sans aucune #transformation du contenu, mais toutes les valeurs ont été anonymisées pour des raisons de confidentialité. 
+Les données étaient disponibles librement sur Kaggle
 
 # volumétrie :
 #1 fichier event csv  275609 lignes / 5 cols

@@ -22,6 +22,7 @@ Les données étaient disponibles librement sur Kaggle
 #2 fichiers property   2 520 259 lignes / 4 cols + 2 115 992 lignes / 4 cols
 #1 fichier category 1669 lignes / 2 cols
 
+https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
 
 # 2 
 

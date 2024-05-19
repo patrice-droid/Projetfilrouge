@@ -4,7 +4,7 @@
 
 
 
-from readline import redisplay
+
 import numpy as np 
 
 import pandas as pd
@@ -82,9 +82,9 @@ df_cat = pd.read_csv(copied_path)
 # In[9]:
 
 
-redisplay(df_cat.head(10))
-redisplay(df_cat.tail(10))
-redisplay(df_cat.info())
+print(df_cat.head(10))
+print(df_cat.tail(10))
+print(df_cat.info())
 df_cat.describe()
 
 
@@ -102,21 +102,21 @@ df_cat.describe()
 
 # Analyse des valeurs manquantes
 missing_values = df_cat.isnull().sum()
-redisplay("Valeurs manquantes",missing_values)
+print("Valeurs manquantes",missing_values)
 
 # Statistiques descriptives
 unique_categories = df_cat['categoryid'].nunique()
 unique_parents = df_cat['parentid'].nunique()
 top_parent_categories = df_cat['parentid'].value_counts().head(10)
 
-redisplay("Nombre de catégorie uniques",unique_categories)
-redisplay("Nombre de parents uniques",unique_parents)
-redisplay("Fréquences catégorie parents",top_parent_categories)
+print("Nombre de catégorie uniques",unique_categories)
+print("Nombre de parents uniques",unique_parents)
+print("Fréquences catégorie parents",top_parent_categories)
 
 
 # Identification des doublons df_cat
 duplicates_events = df_cat.duplicated().sum()
-redisplay("Nombre de doublons dans df_events:", duplicates_events)
+print("Nombre de doublons dans df_events:", duplicates_events)
 
 
 # In[12]:
@@ -147,9 +147,9 @@ df_events = pd.read_csv(copied_path)
 # In[16]:
 
 
-redisplay(df_events.head(10))
-redisplay(df_events.tail(10))
-redisplay(df_events.info())
+print(df_events.head(10))
+print(df_events.tail(10))
+print(df_events.info())
 df_events.describe()
 
 
@@ -167,7 +167,7 @@ df_events.describe()
 
 # Analyse des valeurs manquantes pour df_events
 missing_values_events = df_events.isnull().sum()
-redisplay("Valeurs manquantes dans df_events", missing_values_events)
+print("Valeurs manquantes dans df_events", missing_values_events)
 
 # Statistiques descriptives pour df_events
 unique_visitors = df_events['visitorid'].nunique()
@@ -175,15 +175,15 @@ unique_items = df_events['itemid'].nunique()
 events_count = df_events['event'].value_counts()
 top_items_viewed = df_events[df_events['event'] == 'view']['itemid'].value_counts().head(10)
 
-redisplay("Nombre de visiteurs uniques", unique_visitors)
-redisplay("Nombre d'articles uniques", unique_items)
-redisplay("Fréquences des événements", events_count)
-redisplay("Top 10 des articles les plus consultés", top_items_viewed)
+print("Nombre de visiteurs uniques", unique_visitors)
+print("Nombre d'articles uniques", unique_items)
+print("Fréquences des événements", events_count)
+print("Top 10 des articles les plus consultés", top_items_viewed)
 
 
 # Identification des doublons df_events
 duplicates_events = df_events.duplicated().sum()
-redisplay("Nombre de doublons dans df_events:", duplicates_events)
+print("Nombre de doublons dans df_events:", duplicates_events)
 
 
 # In[19]:
@@ -214,9 +214,9 @@ df_it_prop1 = pd.read_csv(copied_path)
 # In[23]:
 
 
-redisplay(df_it_prop1.head(10))
-redisplay(df_it_prop1.tail(10))
-redisplay(df_it_prop1.info())
+print(df_it_prop1.head(10))
+print(df_it_prop1.tail(10))
+print(df_it_prop1.info())
 df_it_prop1.describe()
 
 
@@ -236,21 +236,21 @@ df_it_prop1.describe()
 
 # Analyse des valeurs manquantes pour df_it_prop1
 missing_values_it_prop1 = df_it_prop1.isnull().sum()
-redisplay("Valeurs manquantes dans df_it_prop1", missing_values_it_prop1)
+print("Valeurs manquantes dans df_it_prop1", missing_values_it_prop1)
 
 # Statistiques descriptives pour df_it_prop1
 unique_items_prop1 = df_it_prop1['itemid'].nunique()
 unique_properties = df_it_prop1['property'].nunique()
 top_properties = df_it_prop1['property'].value_counts().head(10)
 
-redisplay("Nombre d'articles uniques dans df_it_prop1", unique_items_prop1)
-redisplay("Nombre de propriétés uniques", unique_properties)
-redisplay("Top 10 des propriétés les plus fréquentes", top_properties)
+print("Nombre d'articles uniques dans df_it_prop1", unique_items_prop1)
+print("Nombre de propriétés uniques", unique_properties)
+print("Top 10 des propriétés les plus fréquentes", top_properties)
 
 
 # Identification des doublons df_it_prop1
 duplicates_events = df_it_prop1.duplicated().sum()
-redisplay("Nombre de doublons dans df_it_prop1:", duplicates_events)
+print("Nombre de doublons dans df_it_prop1:", duplicates_events)
 
 
 # In[26]:
@@ -281,9 +281,9 @@ df_it_prop2 = pd.read_csv(copied_path)
 # In[30]:
 
 
-redisplay(df_it_prop2.head(10))
-redisplay(df_it_prop2.tail(10))
-redisplay(df_it_prop2.info())
+print(df_it_prop2.head(10))
+print(df_it_prop2.tail(10))
+print(df_it_prop2.info())
 df_it_prop2.describe()
 
 
@@ -303,21 +303,21 @@ df_it_prop2.describe()
 
 # Analyse des valeurs manquantes pour df_it_prop1
 missing_values_it_prop2 = df_it_prop2.isnull().sum()
-redisplay("Valeurs manquantes dans df_it_prop2", missing_values_it_prop2)
+print("Valeurs manquantes dans df_it_prop2", missing_values_it_prop2)
 
 # Statistiques descriptives pour df_it_prop1
 unique_items_prop2 = df_it_prop2['itemid'].nunique()
 unique_properties = df_it_prop2['property'].nunique()
 top_properties = df_it_prop2['property'].value_counts().head(10)
 
-redisplay("Nombre d'articles uniques dans df_it_prop2", unique_items_prop2)
-redisplay("Nombre de propriétés uniques", unique_properties)
-redisplay("Top 10 des propriétés les plus fréquentes", top_properties)
+print("Nombre d'articles uniques dans df_it_prop2", unique_items_prop2)
+print("Nombre de propriétés uniques", unique_properties)
+print("Top 10 des propriétés les plus fréquentes", top_properties)
 
 
 # Identification des doublons df_it_prop2
 duplicates_events = df_it_prop2.duplicated().sum()
-redisplay("Nombre de doublons dans df_it_prop2:", duplicates_events)
+print("Nombre de doublons dans df_it_prop2:", duplicates_events)
 
 
 # In[33]:
@@ -525,12 +525,12 @@ df_events['itemid'] = df_events['itemid'].astype(int)
 df_events['transactionid'] = df_events['transactionid'].astype(int)
 
 # Vérifier les types de données après modification
-redisplay(df_events.dtypes)
+print(df_events.dtypes)
 
 # Afficher les premières lignes pour vérifier
-redisplay(df_events.head(10))
+print(df_events.head(10))
 
-redisplay(df_events.shape)
+print(df_events.shape)
 
 
 # In[52]:
@@ -697,9 +697,9 @@ item = pd.concat([df_it_prop1, df_it_prop2], ignore_index=True)
 
 
 #Vérifications
-redisplay(item.head())
+print(item.head())
 
-redisplay(item.shape)
+print(item.shape)
 
 #La taille du nouveau dataframe est affiché pour s'assurer qu'il contient le nombre de lignes attendu,
 #qui devrait être la somme des lignes des deux dataframes originaux
@@ -710,9 +710,9 @@ redisplay(item.shape)
 
 #nbre d'itemid dans item
 liste_itemid_item=item.itemid.unique()
-redisplay(liste_itemid_item)
+print(liste_itemid_item)
 print("Nbre itemid dans item")
-redisplay(len(liste_itemid_item))
+print(len(liste_itemid_item))
 
 
 # In[68]:
@@ -793,11 +793,11 @@ item_categoryid = item_filtered[item_filtered['property'] == 'categoryid'].copy(
 # Vérification et exploration :
 
 # Vérifier les premières lignes et la structure des nouveaux DataFrames
-redisplay(item_availability.head())
-redisplay(item_categoryid.head())
+print(item_availability.head())
+print(item_categoryid.head())
 
-redisplay("Nombre de lignes dans item_availability:", item_availability.shape[0])
-redisplay("Nombre de lignes dans item_categoryid:", item_categoryid.shape[0])
+print("Nombre de lignes dans item_availability:", item_availability.shape[0])
+print("Nombre de lignes dans item_categoryid:", item_categoryid.shape[0])
 
 
 # In[74]:
@@ -842,11 +842,11 @@ merged_1 = pd.merge_asof(df_events, item_availability, on='timestamp', by='itemi
 
 #Étape 3: Vérification du résultat
 
-redisplay(merged_1.head())
+print(merged_1.head())
 
-redisplay(merged_1.dtypes)
+print(merged_1.dtypes)
 
-redisplay(merged_1.shape)
+print(merged_1.shape)
 
 
 # In[82]:
@@ -875,11 +875,11 @@ merged_2 = pd.merge_asof(merged_1, item_categoryid, on='timestamp', by='itemid',
 
 # Étape 3: Vérification du résultat
 
-redisplay(merged_2.head())
+print(merged_2.head())
 
-redisplay(merged_2.dtypes)
+print(merged_2.dtypes)
 
-redisplay(merged_2.shape)
+print(merged_2.shape)
 
 
 # In[85]:
@@ -910,11 +910,11 @@ merged_2.drop(columns=['property_x', 'property_y'], inplace=True)
 
 # Étape 3: Vérifier le résultat
 
-redisplay(merged_2.head())
+print(merged_2.head())
 
-redisplay(merged_2.dtypes)
+print(merged_2.dtypes)
 
-redisplay(merged_2.shape)
+print(merged_2.shape)
 
 
 # In[89]:
@@ -938,8 +938,8 @@ redisplay(merged_2.shape)
 merged_2['category_id'] = merged_2['category_id'].astype('float')
 df_cat['categoryid'] = df_cat['categoryid'].astype('float')
 
-redisplay(df_cat.shape)
-redisplay(merged_2.shape)
+print(df_cat.shape)
+print(merged_2.shape)
 
 
 # In[91]:
@@ -955,9 +955,9 @@ final_merged = pd.merge(merged_2, df_cat, how='left', left_on='category_id', rig
 
 # Étape 3: Vérification du résultat :
 
-redisplay(final_merged.head())
+print(final_merged.head())
 
-redisplay(final_merged.shape)
+print(final_merged.shape)
 
 
 # In[93]:
@@ -988,11 +988,11 @@ final_merged['view'] = (final_merged['event'] == 'view').astype(int)
 
 
 # Étape 2: Vérification des nouvelles colonnes
-redisplay(final_merged[['event', 'addtocart', 'transaction', 'view']].head())
+print(final_merged[['event', 'addtocart', 'transaction', 'view']].head())
 
 
 
-redisplay(final_merged.dtypes)
+print(final_merged.dtypes)
 
 
 # In[95]:
@@ -1065,8 +1065,8 @@ aggregated_data = final_merged.groupby('itemid').agg({
 
 # Étape 2: Vérification des résultats
 
-redisplay(aggregated_data.head(20))
-redisplay(aggregated_data.shape)
+print(aggregated_data.head(20))
+print(aggregated_data.shape)
 aggregated_data.isna().sum()
 
 
@@ -1075,7 +1075,7 @@ aggregated_data.isna().sum()
 
 # Identification des doublons aggregated_data
 duplicates = aggregated_data.duplicated().sum()
-redisplay("Nombre de doublons dans aggregated_data:", duplicates)
+print("Nombre de doublons dans aggregated_data:", duplicates)
 
 
 # In[102]:
@@ -1085,7 +1085,7 @@ redisplay("Nombre de doublons dans aggregated_data:", duplicates)
 aggregated_data.dropna(subset=['available', 'category_id', 'parentid'], inplace=True)
 
 
-redisplay(aggregated_data.shape)
+print(aggregated_data.shape)
 
 
 # In[103]:
@@ -1326,9 +1326,9 @@ aggregated_data['target'] = (aggregated_data['transaction'] > 0).astype(int)
 
 #Exploration initiale et Analyse descriptive de aggregated_data
 
-redisplay(aggregated_data.head(10))
-redisplay(aggregated_data.tail(10))
-redisplay(aggregated_data.info())
+print(aggregated_data.head(10))
+print(aggregated_data.tail(10))
+print(aggregated_data.info())
 aggregated_data.describe()
 
 
@@ -1360,9 +1360,9 @@ aggregated_data = pd.concat([aggregated_data, available_dummies], axis=1)
 
 #Nouvelle exploration initiale et Analyse descriptive de aggregated_data
 
-redisplay(aggregated_data.head(10))
-redisplay(aggregated_data.tail(10))
-redisplay(aggregated_data.info())
+print(aggregated_data.head(10))
+print(aggregated_data.tail(10))
+print(aggregated_data.info())
 aggregated_data.describe()
 
 

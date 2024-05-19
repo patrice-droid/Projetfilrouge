@@ -1421,4 +1421,24 @@ df_classification = aggregated_data[features_for_classification]
 
 #Question 1 : Entrainer 2 modéles sur la régression :
 
+# In[133]:
+
+
+#Pour prédire la variable view dans une tâche de régression, nous utilisons la régression linéaire et
+#la forêt aléatoire, deux modèles donc :
+
+
+# In[134]:
+
+
+#1 Préparation des données
+
+from sklearn.model_selection import train_test_split
+
+# Séparer les caractéristiques (X) et la cible (y)
+X = df_regression.drop('view', axis=1)
+y = df_regression['view']
+
+# Division des données en ensembles d'entraînement et de test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
